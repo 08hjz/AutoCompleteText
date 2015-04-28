@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">AutoCompeleteText</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="country_names">
+
+     <item>Afghanistan</item>
+        <item>  Albania</item>
+        <item>Algeria</item>
+        <item>Andorra</item>
+        <item>Angola</item>
+        <item> Antigua and Barbuda</item>
+        <item>Argentina</item>
+        <item> Armenia</item>
+        <item> Aruba</item>
+        <item>Australia</item>
+        <item>Azerbaijan</item>
+        <item>China</item>
+    </string-array>
+</resources>
