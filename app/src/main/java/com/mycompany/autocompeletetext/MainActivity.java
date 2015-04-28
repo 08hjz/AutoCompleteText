@@ -6,19 +6,27 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.MultiAutoCompleteTextView;
 
 
 public class MainActivity extends ActionBarActivity {
     AutoCompleteTextView autoCompleteTextView;
     String[] Country_Names;
+    MultiAutoCompleteTextView multiAutoCompleteTextView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        autoCompleteTextView = (AutoCompleteTextView)findViewById(R.id.country);
+        autoCompleteTextView = (AutoCompleteTextView)findViewById(R.id.AutoCompleteTextView);
         Country_Names=getResources().getStringArray(R.array.country_names);
         ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,Country_Names);
         autoCompleteTextView.setAdapter(adapter);
+
+        multiAutoCompleteTextView=(MultiAutoCompleteTextView)findViewById(R.id.MulautoCompleteTextView);
+
+        multiAutoCompleteTextView.setAdapter(adapter);
+        multiAutoCompleteTextView.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());
+
     }
 
 
